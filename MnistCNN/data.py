@@ -23,3 +23,6 @@ def getData():
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=True)
     return train_loader, test_loader
+
+# x, y = getData()
+# print(x)
