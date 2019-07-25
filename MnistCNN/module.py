@@ -8,9 +8,11 @@ class Cnn(nn.Module):
         super().__init__()
         self.conv = nn.Sequential(
             nn.Conv2d(1, 32, 3),  # 第一层通道为1，卷积层为32，卷积核大小为3*3
+            nn.BatchNorm2d(32),
             nn.ReLU(True),  # 激活函数用ReLU
             # nn.MaxPool2d(2, 2),  # 池化层用2*2最大池化
             nn.Conv2d(32, 64, 3),  # 第二层卷积用32通道，64层，大小为3*3
+            nn.BatchNorm2d(64),
             nn.ReLU(True),
             nn.MaxPool2d(2, 2),
             nn.Dropout2d(),
