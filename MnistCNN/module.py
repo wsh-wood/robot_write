@@ -1,4 +1,3 @@
-import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
@@ -28,3 +27,7 @@ class Cnn(nn.Module):
         out = self.fc(out)
         # return F.log_softmax(out, dim=1)# 将得出的值返回成一个
         return out
+
+# 打印模型检查是否有错
+# model = Cnn(1, 10)
+# print(model)
