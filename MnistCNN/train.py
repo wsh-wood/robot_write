@@ -8,8 +8,8 @@ from func import train, test
 model = Cnn(1, 10)
 train_loader, test_loader = getData()
 epochs = 12  # 训练次数
-lr = 0.01  # 学习率
-momentum = 0.6  # 动量
+lr = 0.005  # 学习率
+momentum = 0.9  # 动量
 model_file = 'model_file'
 log_interval = 20
 
