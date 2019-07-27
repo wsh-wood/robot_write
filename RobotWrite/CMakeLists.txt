@@ -63,4 +63,4 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
-#add_subdirectory(src)
+add_subdirectory(src)
