@@ -63,4 +63,11 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
+# 引入kenect2相关的依赖
+set(FREENECT_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/denpendents/include)
+set(FREENECT_LIBRARIES ${PROJECT_SOURCE_DIR}/denpendents/lib)
+
+include_directories(${FREENECT_INCLUDE_DIRS})
+link_directories(${FREENECT_LIBRARIES})
+
 add_subdirectory(src)
