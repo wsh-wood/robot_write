@@ -61,6 +61,7 @@ void cnnKinect() {
     rgbmat = Mat(rgb->height, rgb->width, CV_8UC4, rgb->data);
 
     imshow("rgb", rgbmat);
+    // TODO 对图片进行裁剪，降噪，旋转等操作。然后保存。
 
     stringstream rr;
     rr << "/home/xy/CLionProjects/robot_write/Test/src/cameraImage/camera_image.jpg";
