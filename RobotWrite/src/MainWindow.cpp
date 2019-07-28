@@ -19,12 +19,19 @@ void handleImage(cv::Mat &img, cv::Mat &data) {
 
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
     this->resize(400, 400);
+
     QPushButton *predictImageBtn = new QPushButton("识别图片");
-    auto *wholeLayout = new QHBoxLayout;
+    QPushButton *cnnCameraBtn = new QPushButton("连接相机");
+
+    auto *wholeLayout = new QVBoxLayout;
+
     wholeLayout->addWidget(predictImageBtn);
+    wholeLayout->addWidget(cnnCameraBtn);
+
     setLayout(wholeLayout);
 
     connect(predictImageBtn, &QPushButton::clicked, this, &MainWindow::predictImage);
+    connect(cnnCameraBtn,&QPushButton::clicked,this,&MainWindow::cnnCamera);
 }
 
 MainWindow::~MainWindow() {
@@ -45,5 +52,12 @@ void MainWindow::predictImage() {
     auto model = torch::jit::load("/home/xy/CLionProjects/robot_write/RobotWrite/src/mnist_cpp2.pt");
     assert(model != nullptr);
     // TODO 模型加载失败，先进行下一项。
+
+}
+
+void MainWindow::cnnCamera() {
+    qDebug()<<"连接相机"<<endl;
+    // 创建相机获取保存图片
+    cnnKinect();
 
 }

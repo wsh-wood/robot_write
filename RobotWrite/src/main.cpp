@@ -1,17 +1,13 @@
 //
-// Created by xy on 19-7-27.
+// Created by xy on 19-7-28.
 //
-
-#include <iostream>
+#include "Kinect.h"
 #include <QApplication>
 #include "MainWindow.h"
 
-using namespace std;
-
-int main(int argc, char *argv[]) {
-    QApplication app(argc, argv);
+int main(int argc,char *argv[]){
+    QApplication app(argc,argv);
     MainWindow window;
     window.show();
-    return QApplication::exec();
-
+    return 0;
 }

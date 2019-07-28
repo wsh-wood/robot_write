@@ -1,4 +1,4 @@
-# try to find OpenCV, the version is 2.8.4
+
 # once done, this will define
 #OpenCV_FOUND        -  whether there is OpenCV in the prebuilt libraries
 #OpenCV_INCLUDE_DIRS -  include directories for OpenCV
@@ -8,7 +8,9 @@
 unset(OpenCV_FOUND)
 
 set(OpenCV_DIR ${PREBUILT_DIR}/opencv-3.4.1)
-message(status "8*********"${OpenCV_DIR})
+
+MESSAGE(STATUS "TEST  ${PREBUILT_DIR}")
+
 set(OpenCV_INCLUDE_DIRS ${OpenCV_DIR}/include)
 SET(OpenCV_LIB_COMPONENTS opencv_videostab;opencv_video;opencv_superres;opencv_stitching;opencv_photo;
         opencv_objdetect;opencv_ml;opencv_imgproc;opencv_highgui;opencv_flann;opencv_features2d;
@@ -31,7 +33,7 @@ if (OpenCV_INCLUDE_DIRS AND OpenCV_LIBRARIES)
   set(OpenCV_FOUND TRUE)
 endif (OpenCV_INCLUDE_DIRS AND OpenCV_LIBRARIES)
 
-if (OpenCV_FOUND) 
+if (OpenCV_FOUND)
   if (NOT OpenCV_FIND_QUIETLY)
     message(STATUS "Found OpenCV: ${OpenCV_LIBRARIES}")
   endif (NOT OpenCV_FIND_QUIETLY)

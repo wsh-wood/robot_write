@@ -5,14 +5,19 @@
 #ifndef ROBOT_WRITE_MAINWINDOW_H
 #define ROBOT_WRITE_MAINWINDOW_H
 
+
+#include <torch/torch.h>
+#include <torch/script.h>
 #include <iostream>
 #include <QWidget>
 #include <QPushButton>
-#include <QHBoxLayout>
+#include <QVBoxLayout>
 #include <qdebug.h>
 #include <opencv2/opencv.hpp>
-#include <torch/torch.h>
-#include <torch/script.h>
+
+
+
+#include "Kinect.h"
 
 using namespace std;
 
@@ -25,6 +30,7 @@ public:
 
 public:
     void predictImage();
+    void cnnCamera();
 };
 
 
