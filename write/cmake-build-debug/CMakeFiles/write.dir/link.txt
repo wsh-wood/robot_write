@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/write.dir/main.cpp.o  -o write 
