@@ -4,8 +4,6 @@
 
 #ifndef ROBOT_WRITE_MAINWINDOW_H
 #define ROBOT_WRITE_MAINWINDOW_H
-
-
 #include <torch/torch.h>
 #include <torch/script.h>
 #include <iostream>
@@ -14,15 +12,13 @@
 #include <QVBoxLayout>
 #include <qdebug.h>
 #include <opencv2/opencv.hpp>
-
-
-
 #include "Kinect.h"
+
 
 using namespace std;
 
 class MainWindow : public QWidget {
-    Q_OBJECT
+Q_OBJECT
 public:
     explicit MainWindow(QWidget *parent = Q_NULLPTR);
 
@@ -30,6 +26,7 @@ public:
 
 public:
     void predictImage();
+
     void cnnCamera();
 };
 

@@ -45,6 +45,7 @@ void MainWindow::predictImage() {
     cv::Mat data;
     // 对图片进行处理。
     handleImage(img, data);
+
     cv::imshow("data", data);
     // 将data转换为tensor类型
     auto input = torch::from_blob(data.data, {1, 1, 28, 28}, at::kFloat);
@@ -59,5 +60,4 @@ void MainWindow::cnnCamera() {
     qDebug()<<"连接相机"<<endl;
     // 创建相机获取保存图片
     cnnKinect();
-
 }
