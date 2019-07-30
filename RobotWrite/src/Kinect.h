@@ -4,6 +4,8 @@
 
 #ifndef ROBOT_WRITE_KINECT_H
 #define ROBOT_WRITE_KINECT_H
+#include <torch/torch.h>
+#include <torch/script.h>
 
 #include <iostream>
 #include <libfreenect2/libfreenect2.hpp>
@@ -15,6 +17,7 @@
 #include <opencv2/opencv.hpp>
 #include <sstream>
 #include <cstdlib>
+#include "dealImage.h"
 
 using namespace std;
 using namespace cv;
